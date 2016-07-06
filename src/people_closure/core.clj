@@ -19,6 +19,7 @@
 (defn people-html [people]
   [:html
    [:body
+    [:a {:href "/Russia"} "Russia"]  ; how to create a hyperlink and specify attributes within a tag (they go in the hashmap... HINT HINT)
     [:ol            ;creating an organized list
      (map (fn [person]        
             [:li (str (get person "first_name") " " (get person "last_name"))])  ;grabbing and combining just the first and last names from the person hashmap and combining them with 'str'
